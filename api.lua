@@ -408,10 +408,10 @@ function spidermob:register_mob(name, def)
 					-- if there is a player nearby look at them
 					local lp = nil
 					local s = self.object:getpos()
+					local yaw = 0
 					if self.type == "npc" then
 						local o = minetest.get_objects_inside_radius(self.object:getpos(), 3)
 						
-						local yaw = 0
 						for _,o in ipairs(o) do
 							if o:is_player() then
 								lp = o:getpos()
